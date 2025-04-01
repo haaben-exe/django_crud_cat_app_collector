@@ -1,12 +1,10 @@
-body {
-    background-color: rgba(193, 233, 255, 0.9);
-  }
+/* static/css/base.css  */
 
-  html {
-    box-sizing: border-box;
-  }
+html {
+  box-sizing: border-box;
+}
 
-  /* The Universal Selector */
+/* The Universal Selector */
 *, /* All elements*/
 *::before, /* All ::before pseudo-elements */
 *::after {
