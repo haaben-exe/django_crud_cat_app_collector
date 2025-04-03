@@ -36,10 +36,10 @@
         />
       </div>
       <h2 class="card-title">{{ cat.name }}</h2>
-      {% if cat.age > 0 %}
-      <p>A {{ cat.age }} year old {{ cat.breed }}</p>
+      {% if cat.age >= 1 %}
+      <p>{{ cat.age }} year old {{ cat.breed }}</p>
       {% else %}
-      <p>A {{ cat.breed }} kitten.</p>
+      <p>{{ cat.breed }} kitten.</p>
       {% endif %}
       <p><small>{{ cat.description }}</small></p>
     </div>
