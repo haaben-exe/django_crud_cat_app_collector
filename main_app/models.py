@@ -1,5 +1,10 @@
 from django.db import models
 from django.urls import reverse
+from datetime import date
+from django.contrib.auth.models import User
+
+
+
 
 MEALS = (
     ('B', 'Breakfast'),
@@ -25,6 +30,9 @@ class Cat(models.Model):
     description = models.TextField(max_length=250)
     age = models.IntegerField()
     toys = models.ManyToManyField(Toy)
+    # Add the foreign key linking to a user instance
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return f'({self.id}) {self.name}, is a {self.age} year old {self.breed}. {self.description}'
